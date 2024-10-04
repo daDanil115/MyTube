@@ -5,13 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MyTube</title>
     </head>
-    <body>
-        <h1>MyTube</h1>
+    <body bgcolor="black">
+        <font color="white"> MyTube </font>
         <ul>
             {% for video in videos %}
                 <li>
                     <video width="320" height="240" controls>
-                        <source src="C:\Users\Nabiullin\Desktop\html\my_youtube_clone\static\uploads\video" type="video/mp4">
+                        <source src="C:\Users\Nabiullin\Desktop\html\my_youtube_clone\static\uploads\video" type="video\mp4">
                         Ваш браузер не поддерживает видео.
                     </video>
                     <p>{{ video }}</p>
