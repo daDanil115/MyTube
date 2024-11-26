@@ -4,20 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MyTube</title>
-        <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .comment-box {
-            margin-bottom: 20px;
-        }
-        .comment {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin-top: 10px;
-        }
-    </style>
     </head>
     <body bgcolor="black">
         <font color="white"> MyTube </font>
@@ -32,40 +18,6 @@
                 </li>
             {% endfor %}
         </ul>
-        <a href="upload.html">Загрузить новое видео</a><br>
-        <h1>Оставьте комментарий</h1>
-    <div class="comment-box">
-        <form id="commentForm">
-            <textarea id="commentInput" rows="4" cols="50" placeholder="Введите ваш комментарий..." required></textarea><br>
-            <button type="submit">Отправить</button>
-        </form>
-    </div>
-
-    <div id="commentsSection">
-        <h2>Комментарии</h2>
-         <p style="color: red;"><div id="commentsList"></div></p>
-    </div>
-
-    <script>
-        const form = document.getElementById('commentForm');
-        const commentInput = document.getElementById('commentInput');
-        const commentsList = document.getElementById('commentsList');
-
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // предотвращает перезагрузку страницы
-
-            const commentText = commentInput.value;
-
-            if (commentText) {
-                const commentDiv = document.createElement('div');
-                commentDiv.classList.add('comment');
-                commentDiv.textContent = commentText;
-
-                commentsList.appendChild(commentDiv);
-                commentInput.value = ''; // очищаем поле ввода
-            }
-        });
-    </script>
-
+        <a href="upload.html">Загрузить новое видео</a>
     </body>
 </html>
